@@ -1,145 +1,42 @@
-
-import notification from './assets/images/notification.png';
-import today from './assets/images/today.png';
-// import schedule from './assets/images/schedule.png';
-// import all_task from './assets/images/all_task.png';
-// import overtime from './assets/images/overtime.png';
-import circle from './assets/images/circle.png';
-import dot from './assets/images/dot.png';
-// import dots from './assets/images/dots.png';
-
-
+import menu from '../src/assets/images/menu.png';
+import profile from '../src/assets/images/profile.png';
+// import checked from '../src/assets/images/checked.png';
+import checklist from '../src/assets/images/checklist.png';
+// import circle from '../src/assets/images/circle';
+// import edit from '../src/assets/images/edit.png';
+// import square from '../src/assets/images/square.png';
+// import trash from '../src/assets/images/trash.png';
 
 function App() {
   
   return (
-    <div className="w-full h-auto bg-gray-400 justify-center">
+    <div className="w-full h-auto flex">
+        {/* Sidebar */}
 
-        {/* Navbar */}
-        <div className="w-full bg-pink-200 h-16 px-6 flex items-center justify-between">         
-          <div className="flex flex-col">
-            <p className="text-xl font-semibold text-gray-800">
-              Hello Jack,
-            </p>
-            <p className="text-sm text-gray-500">
-              You have work today
-            </p>
-          </div>
-          <div className="relative flex items-center justify-center">
-            <img className="w-8 h-8 cursor-pointer"src={notification} alt="notification"/>
-
-            {/* Notification badge */}
-            <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-400 rounded-full text-white text-[10px] flex items-center justify-center">
-              3
-            </span>
-          </div>
+        <div className='bg-pink-300 h-full w-[25%]'>
+            <div className='bg-gray-400 w-full h-8 '>
+              <img className='w-8 h-8 ml-4' src={menu} alt="menu" />
+            </div>
+            <div className='bg-blue-300 w-full h-30 place-items-center '>
+              <img className='w-12 h-12 mt-4' src={profile} alt="profile" />
+              <p className='text-bold mt-2'>M Kunthea</p>
+              <p className='text-sm'>abc@gmail.com</p>
+            </div>
+            <div className='border-b border-gray-800 '></div>
+            <div className='bg-gray-400 w-full h-12 flex items-center justify-center gap-6 pl-4'>
+              <img className='w-8 h-8 ' src={checklist} alt="checklist" />
+              <p>To-do list</p>
+            </div>
         </div>
 
-      {/* Content card */}
-      <div className="bg-green-200 w-full h-[500px] grid grid-cols-2 grid-rows-2 gap-4 p-4">
-
-        <div className="bg-purple-200 rounded-xl flex items-center justify-center overflow-hidden">
-          <img className="w-80 h-80" src={today} />
-        </div>
-
-        <div className="bg-yellow-200 rounded-xl flex items-center justify-center overflow-hidden">
-          <img className="w-20 h-20" src={today} />
-        </div>
-
-        <div className="bg-blue-200 rounded-xl flex items-center justify-center overflow-hidden">
-          <img className="w-12 h-12" src={today} />
-        </div>
-
-        <div className="bg-pink-200 rounded-xl flex items-center justify-center overflow-hidden">
-          <img className="w-10 h-10" src={today} />
-        </div>
-
-      </div>
-
-      {/* Today's task */}
-      <div className="bg-white rounded-2xl shadow-sm p-6">
-      <h2 className="text-xl font-semibold mb-6">Today's Task</h2>
-      
-        <div className="space-y-4">
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div className=''>
-              <img className='w-2 h-2' src={circle} alt="circle" />
-              <p className="font-medium">Project retrospective</p>
-              <p className="text-sm text-gray-500">
-                Today 
-                <img className='w-8 h-8' src={dot} alt="dot" />
-                4:50 PM
-              </p>
-            </div>
-            <button>•••</button>
+        {/* Content page */}
+        {/* <div className='bg-gray-600 '>
+          <div className='bg-pink-400 w-full h-20'>To Do List</div>
+          <div className=''>
+            <button><input type="text" />Type your task here...</button>
           </div>
-
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div>
-              <p className="font-medium">Evening team meeting</p>
-              <p className="text-sm text-gray-500">
-                Today • 4:50 PM
-              </p>
-            </div>
-            <button>•••</button>
-          </div>
-
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div>
-              <p className="font-medium">Create monthly deck</p>
-              <p className="text-sm text-gray-500">
-                Today
-              </p>
-            </div>
-            <button>•••</button>
-          </div>
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div>
-              <p className="font-medium">Create monthly deck</p>
-              <p className="text-sm text-gray-500">
-                Today
-              </p>
-            </div>
-            <button>•••</button>
-          </div>
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div>
-              <p className="font-medium">Create monthly deck</p>
-              <p className="text-sm text-gray-500">
-                Today
-              </p>
-            </div>
-            <button>•••</button>
-          </div>
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div>
-              <p className="font-medium">Create monthly deck</p>
-              <p className="text-sm text-gray-500">
-                Today
-              </p>
-            </div>
-            <button>•••</button>
-          </div>
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div>
-              <p className="font-medium">Create monthly deck</p>
-              <p className="text-sm text-gray-500">
-                Today
-              </p>
-            </div>
-            <button>•••</button>
-          </div>
-          <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-            <div>
-              <p className="font-medium">Create monthly deck</p>
-              <p className="text-sm text-gray-500">
-                Today
-              </p>
-            </div>
-            <button>•••</button>
-          </div>
-        </div>
-    </div>
+          <div></div>
+        </div> */}
     </div>
   )
 }
